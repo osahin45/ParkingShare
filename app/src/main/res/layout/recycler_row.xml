@@ -2,7 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorGreen">
+    android:background="@drawable/background_border">
     <ImageView
     android:layout_width="30dp"
     android:layout_height="30dp"
@@ -22,7 +22,7 @@
         android:layout_centerVertical="true"
         android:textAlignment="center"
         android:gravity="center"
-        android:textSize="20sp"/>
+        android:textSize="15sp"/>
     <TextView
         android:id="@+id/distance_text"
         android:layout_width="wrap_content"
