@@ -191,7 +191,6 @@ public class HomeActivity extends AppCompatActivity implements RecyclerAdapter.O
         }catch (Exception e){
 
         }
-
         progressBar.setVisibility(View.GONE);
     }
 

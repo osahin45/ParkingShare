@@ -134,8 +134,7 @@ public class EditProfileFragment extends Fragment {
 
                 saveUserInfo();
 
-               // Intent intentToLogin = new Intent(getActivity(),AccountSettingsActivity.class);
-               //startActivity(intentToLogin);
+
 
             }
         });
@@ -215,7 +214,7 @@ public class EditProfileFragment extends Fragment {
             storageReference.child("ProfilePhoto").child(userID).putFile(imageData).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    Toast.makeText(getActivity(),"Profil Fotoğrafı Kaydedildi",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(),"Profil Fotoğrafı Kaydedildi.",Toast.LENGTH_LONG).show();
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
@@ -253,12 +252,12 @@ public class EditProfileFragment extends Fragment {
                     mFireStore.collection("Users").document(userID).update("name",user.getAd());
                     mFireStore.collection("Users").document(userID).update("surname",user.getSoyad());
                     mFireStore.collection("Users").document(userID).update("plaka",user.getPlaka());
-                    Toast.makeText(getActivity(),"Kullanıcı Bilgileri Kaydedildi",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(),"Kullanıcı Bilgileri Kaydedildi",Toast.LENGTH_SHORT).show();
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(getActivity(),"Fotograf Cloud Firestore da Update Edilemedi.",Toast.LENGTH_LONG).show();
+                    Log.d(TAG, "onFailure: "+e.getLocalizedMessage().toString());
                 }
             });
     }

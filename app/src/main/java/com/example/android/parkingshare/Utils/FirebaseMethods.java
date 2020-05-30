@@ -92,6 +92,7 @@ public class FirebaseMethods {
                     if (documentSnapshot.exists()){
 
                         Map<String,Object>data = documentSnapshot.getData();
+                        assert data != null;
                         String accName =(String) data.get("name");
                         String accSurname =(String) data.get("surname");
                         String accPlaka =(String) data.get("plaka");
@@ -103,7 +104,7 @@ public class FirebaseMethods {
                         username.setText(accUserName);
                         Picasso.get().load(accPhotoUrl).into(profilePhoto);
                     }
-                    Toast.makeText(mContext,"Veriler Geliyoor",Toast.LENGTH_LONG).show();
+                    Log.d(TAG, "onEvent: coming data");
                 }
             });
 
