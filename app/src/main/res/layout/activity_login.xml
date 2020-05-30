@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.LoginActivity"
+    android:background="@color/colorPrimaryDark">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relLayout1">
+      <include layout="@layout/snippet_login_register_picture"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relLayout2"
+        android:layout_below="@+id/relLayout1">
+        <EditText
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"
+            android:id="@+id/emailText_login"
+            android:layout_width="326dp"
+            android:layout_height="50dp"
+            android:autofillHints="@string/email_address"
+            android:ems="10"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/textHint"
+            android:textSize="20sp"
+            android:theme="@style/MyEditText"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/boarder"
+            />
+
+        <EditText
+            android:textAlignment="center"
+            android:background="@drawable/boarder"
+            android:layout_marginTop="15dp"
+            android:id="@+id/password_login"
+            android:layout_width="325dp"
+            android:layout_height="50dp"
+            android:theme="@style/MyEditText"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/textHint"
+            android:textSize="20sp"
+           android:layout_below="@+id/emailText_login"
+            tools:ignore="DuplicateIds"
+            android:autofillHints="@string/password"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:onClick="signIn"
+            android:id="@+id/giris_yap"
+            android:layout_width="326dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mybutton"
+            android:gravity="center"
+            android:text="@string/giris_yap"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_below="@+id/password_login"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/btnKayıt"
+            android:layout_width="326dp"
+            android:layout_height="40dp"
+            android:background="@drawable/mybutton"
+            android:gravity="center"
+            android:text="@string/kay_t_ol"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_below="@+id/giris_yap"
+            android:layout_centerHorizontal="true"
+            android:onClick="setRegisterActivity"/>
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/progressbar_login"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

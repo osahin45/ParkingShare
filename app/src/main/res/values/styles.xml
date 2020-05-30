@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.ParkingShare" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="MyEditText" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/textHint</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <style name="toolbarTitle" parent="Theme.AppCompat.NoActionBar">
+        <item name="fontFamily">@font/roboto_mono_medium</item>
+    </style>
+
+    <style name="Theme.ParkingShare.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ParkingShare.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ParkingShare.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+      android:background="@color/white" >
+
+    <androidx.fragment.app.FragmentContainerView
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Maps.MapsActivity"
+        android:layout_below="@id/relLayout1"
+        android:layout_marginBottom="60dp"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/relLayout1"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/map_search_edit"
+        android:elevation="10dp">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:id="@+id/ic_search"
+            android:src="@drawable/ic_search_black_24dp"
+            android:layout_centerVertical="true"
+            />
+        <EditText
+            android:id="@+id/search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:layout_toEndOf="@id/ic_search"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:hint="Adres, Şehir veya Posta Kodu Girin"
+            android:textColorHint="@color/textHint"
+            android:autofillHints="Adres, Şehir veya Posta Kodu Girin"
+            android:imeOptions="actionSearch"
+            />
+
+    </RelativeLayout>
+
+        <include layout="@layout/layout_bottom_nav" android:id="@+id/include"/>
+
+</RelativeLayout>
+
+
+
